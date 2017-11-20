@@ -1,12 +1,13 @@
 <snippet>
 	<content><![CDATA[
-	<xsl:call-template name="image">
-		<xsl:with-param name="image" select="${1:\$image}" />
-		<xsl:with-param name="alt" select="${2:\$image-alt}" />
-		${3:<xsl:with-param name="type" select="'${4:[resize | cover | contain]}'" />}
-		${5:<xsl:with-param name="enable-veil" select="${6:[true() | false()]}" />}
-		${7:<xsl:with-param name="attr" select="\$computed-attr-${8:image}" />}
-	</xsl:call-template>$0
+<!-- ${1:IMAGE} -->
+<xsl:call-template name="image">
+	<xsl:with-param name="image" select="${2:\$image}" />
+	<xsl:with-param name="alt" select="${3:\$image-alt}" />
+	${4:<xsl:with-param name="type" select="'${5:[resize | cover | contain]}'" />}
+	${6:<xsl:with-param name="enable-veil" select="${7:[true() | false()]}" />}
+	${8:<xsl:with-param name="attr" select="\$computed-attr-${9:image}" />}
+</xsl:call-template>$0
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>im</tabTrigger>
