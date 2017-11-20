@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<!-- COMPONENT: ${1:[component name]} -->
+	<xsl:template name="${1:[component name]}">
+		<xsl:param name="attr" />
+
+
+		<!-- COMPUTED ATTRIBUTES -->
+		<xsl:variable name="computed-attr">
+			<xsl:copy-of select="\$attr"/>
+			<add dev-component="${1:[component name]}" />
+		</xsl:variable>
+
+
+		<!-- STRUCTURE -->
+		<xsl:call-template name="element">
+			<xsl:with-param name="element" select="'${2}'" />
+			<xsl:with-param name="attr" select="\$computed-attr" />
+			<xsl:with-param name="content">
+				${0}
+			</xsl:with-param> 
+		</xsl:call-template>
+	</xsl:template>
+</xsl:stylesheet>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>new</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope>
+</snippet>
