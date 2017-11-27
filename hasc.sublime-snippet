@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<xsl:variable name="\$has-${1:[name]}" select="count(\$${1:[name]}) &gt; 0" />
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hasc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.xsl</scope>
+</snippet>
