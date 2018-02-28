@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+<!-- ${1:TITLE} -->
+<xsl:if test="\$has-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}">
+	<xsl:call-template name="heading">
+		<xsl:with-param name="attr" select="\$computed-attr-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />
+		<xsl:with-param name="level" select="'${2:2}'" />
+		<xsl:with-param name="content" select="\$${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />
+	</xsl:call-template>
+</xsl:if>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>heao</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.xsl</scope>
+</snippet>

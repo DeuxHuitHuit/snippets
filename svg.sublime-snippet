@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+<!-- ICON: ${1:[name]} -->
+<xsl:template name="icon-${1:[name]}">
+	<xsl:param name="class" select="'width-full overflow-visible block'" />
+	<svg xmlns="http://www.w3.org/2000/svg"
+		class="{\$class}"
+		style="padding-bottom: 150%; height: 1px;"
+		preserveAspectRatio="xMidYMin slice"
+		viewBox="0 0 ${2}">
+		<path ${3:fill}="currentColor" d="${4}"/>
+	</svg>
+</xsl:template>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sv</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml.xsl</scope>
+</snippet>
