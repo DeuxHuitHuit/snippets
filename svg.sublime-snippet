@@ -5,10 +5,10 @@
 	<xsl:param name="class" select="'width-full overflow-visible block'" />
 	<svg xmlns="http://www.w3.org/2000/svg"
 		class="{\$class}"
-		style="padding-bottom: 150%; height: 1px;"
+		style="padding-bottom: ${3:100}%; height: 1px;"
 		preserveAspectRatio="xMidYMin slice"
-		viewBox="0 0 ${2}">
-		<path ${3:fill}="currentColor" d="${4}"/>
+		viewBox="0 0 ${2:0 0}">
+		<path ${4:fill}="currentColor" d="${5}"/>
 	</svg>
 </xsl:template>
 ]]></content>
