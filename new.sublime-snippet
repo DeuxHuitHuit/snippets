@@ -5,12 +5,12 @@
 
 <!-- COMPONENT: ${1:[component name]} -->
 	<xsl:template name="${1:[component name]}">
-		<xsl:param name="attr" />
+		<xsl:param name="ext-attr" />
 
 
-		<!-- COMPUTED ATTRIBUTES -->
-		<xsl:variable name="computed-attr">
-			<xsl:copy-of select="\$attr"/>
+		<!-- ATTRIBUTES -->
+		<xsl:variable name="attr">
+			<xsl:copy-of select="\$ext-attr"/>
 			<add dev-component="${1:[component name]}" />
 		</xsl:variable>
 
@@ -18,7 +18,7 @@
 		<!-- STRUCTURE -->
 		<xsl:call-template name="element">
 			<xsl:with-param name="element" select="'${2}'" />
-			<xsl:with-param name="attr" select="\$computed-attr" />
+			<xsl:with-param name="attr" select="\$attr" />
 			<xsl:with-param name="content">
 				${0}
 			</xsl:with-param> 
