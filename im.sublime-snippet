@@ -1,9 +1,8 @@
 <snippet>
 	<content><![CDATA[
-<!-- ${1:IMAGE} -->
+<!-- ${1:Image} -->
 <xsl:call-template name="image">
 	<xsl:with-param name="image" select="${2:\$image}" />
-	<xsl:with-param name="alt" select="${3:\$image-alt}" />
 	${4:<xsl:with-param name="type" select="'${5:[resize | cover | contain]}'" />}
 	${6:<xsl:with-param name="enable-veil" select="${7:[true() | false()]}" />}
 	${8:<xsl:with-param name="attr" select="\$computed-attr-${9:image}" />}

@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<!-- ${1:TEXT}  -->
+<!-- ${1:Text}  -->
 <xsl:if test="\$has-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}">
 	<xsl:call-template name="text">
 		<xsl:with-param name="attr" select="\$computed-attr-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />

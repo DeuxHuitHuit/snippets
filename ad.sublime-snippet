@@ -1,11 +1,9 @@
 <snippet>
 	<content><![CDATA[
-<xsl:if test="{$1}">
-	<add ${2:class}="${3}" />
-</xsl:if>
+<add ${1:class}="${2}" />
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>addo</tabTrigger>
+	<tabTrigger>ad</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.xml.xsl</scope>
 </snippet>
