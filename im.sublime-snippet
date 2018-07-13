@@ -5,7 +5,7 @@
 	<xsl:with-param name="image" select="${2:\$image}" />
 	${4:<xsl:with-param name="type" select="'${5:[resize | cover | contain]}'" />}
 	${6:<xsl:with-param name="enable-veil" select="${7:[true() | false()]}" />}
-	${8:<xsl:with-param name="attr" select="\$computed-attr-${9:image}" />}
+	${8:<xsl:with-param name="attr" select="\$attr-${9:image}" />}
 </xsl:call-template>$0
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
