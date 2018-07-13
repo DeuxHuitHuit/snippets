@@ -3,7 +3,7 @@
 <!-- BUTTON: ${1:[name]} -->
 <xsl:call-template name="button">
 	<xsl:with-param name="url" select="$2" />
-	<xsl:with-param name="attr" select="\$computed-attr-${1:[name]}" />
+	<xsl:with-param name="attr" select="\$attr-${1:[name]}" />
 	<xsl:with-param name="failover-element" select="'${3:button}'" />
 	<xsl:with-param name="content">
 		$0

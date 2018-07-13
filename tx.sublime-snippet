@@ -2,7 +2,7 @@
 	<content><![CDATA[
 <!-- ${1:Text}  -->
 <xsl:call-template name="text">
-	<xsl:with-param name="attr" select="\$computed-attr-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />
+	<xsl:with-param name="attr" select="\$attr-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />
 	<xsl:with-param name="content" select="\$${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />
 </xsl:call-template>
 ]]></content>
