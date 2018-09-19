@@ -4,7 +4,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <!-- COMPONENT: ${1:[component name]} -->
-	<xsl:template name="${1:[component name]}">
+	<xsl:template name="${1:[component name]}" ${3:match="entry | item"} ${4:mode="${5:$1}"}>
 		<xsl:param name="ext-attr" />
 
 
