@@ -1,2 +1,2 @@
-# 288-sublime-snippets
-My personal variation of sublime-snippets for Deux Huit Huit based on the snippets of @BloodBrother 
+# Deux Huit Huit's snippets
+A collection of useful snippets for Deux Huit Huit's methodology.
