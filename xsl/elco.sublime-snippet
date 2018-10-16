@@ -3,7 +3,7 @@
 <!-- ${1:[name]} -->
 <xsl:if test="\$has-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}">
 	<xsl:call-template name="element">
-		<xsl:with-param name="attr" select="\$attr-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />{$2:
+		<xsl:with-param name="attr" select="\$attr-${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />${2:
 		<xsl:with-param name="element" select="'${3:div}'" />}
 		<xsl:with-param name="content" select="\$${1/(\w+)|(\s)/(?1\L$1)(?2-)/g}" />
 	</xsl:call-template>
