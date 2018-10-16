@@ -7,7 +7,7 @@
 	<xsl:otherwise>
 		<add ${4:class}="${5}" />
 	</xsl:otherwise>
-</xsl:choose>
+</xsl:choose>$0
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>adc</tabTrigger>

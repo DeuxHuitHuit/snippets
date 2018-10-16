@@ -3,6 +3,7 @@
 <xsl:variable name="attr-${1:[name]}">
 	<add dev-element="${1:[name]}" />
 </xsl:variable>
+$0
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>at</tabTrigger>

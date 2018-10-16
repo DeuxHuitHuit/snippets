@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<xsl:variable name="has-${1:[name]}" select="string-length(\$${1:[name]}) != 0" />
+<xsl:variable name="has-${1:[name]}" select="string-length(\$${1:[name]}) != 0" />$0
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>has</tabTrigger>
