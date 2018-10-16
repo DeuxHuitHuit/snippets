@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<xsl:variable name="has-${1:[name]}" select="count(\$${1:[name]}) &gt; 0" />
+<xsl:variable name="has-${1:[name]}" select="\$${1:[name]}-count &gt; 0" />
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>hasc</tabTrigger>
