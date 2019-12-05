@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:exsl="http://exslt.org/common"
+	xmlns:func="http://exslt.org/functions"
+	xmlns:util="https://github.com/DeuxHuitHuit/288-utils"
+	extension-element-prefixes="exsl func util">
+
+<!-- FUNCTION: util:${1:[util name]} -->
+	<func:function name="util:${1:[util name]}">
+		${2:<xsl:param name="items" />}
+		<func:result>
+			<xsl:call-template name="util-${1:[util name]}">
+				${3}
+			</xsl:call-template>
+		</func:result>
+	</func:function>
+
+<!-- COMPONENT: util-${1:[util name]} -->
+	<xsl:template name="util-${1:[util name]}">
+		${2:<xsl:param name="items" />}
+
+		${4}
+	</xsl:template>
+</xsl:stylesheet>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>newu</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.xml</scope>
+</snippet>

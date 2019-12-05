@@ -4,7 +4,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <!-- COMPONENT: ${1:[component name]} -->
-	<xsl:template name="${1:[component name]}" ${2:match="${3:entry | item}" mode="${1:[component name]}"}>
+	<xsl:template name="${1:[component name]}" match="item[@section = '${2:${1:[component name]}}']" mode="module">
 		<xsl:param name="ext-attr" />
 
 
@@ -14,11 +14,16 @@
 			<add dev-component="${1:[component name]}" />
 		</xsl:variable>
 
+		<xsl:variable name="attr-ctn">
+			<add dev-extended-by="${1:[component name]}" />
+		</xsl:variable>
+
 
 		<!-- STRUCTURE -->
-		<xsl:call-template name="element">
-			<xsl:with-param name="element" select="'${4}'" />
-			<xsl:with-param name="attr" select="\$attr" />
+		<xsl:call-template name="module">
+			<xsl:with-param name="transition-name" select="'transition-${1:[component name]}'" />
+			<xsl:with-param name="ext-attr" select="\$attr" />
+			<xsl:with-param name="ext-attr-ctn" select="\$attr-ctn" />
 			<xsl:with-param name="content">
 				${0}
 			</xsl:with-param> 
@@ -28,7 +33,7 @@
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>new</tabTrigger>
+	<tabTrigger>newm</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.xml</scope>
 </snippet>
